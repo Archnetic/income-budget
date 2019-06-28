@@ -1,0 +1,30 @@
+/*
+	Slide Bar Styling
+*/
+#slideBar{
+	height: 100%;
+	position: fixed;
+	width: auto;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: black;
+	overflow-x: hidden;
+	padding-top: 20px;
+
+}
+
+#slideBar ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#slideBar ul li{
+	display: block;
+	width: 10%;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	color: white;
+}
