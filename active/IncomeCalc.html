@@ -4,12 +4,13 @@
 <head>
 	<link rel="stylesheet" href="Style.css">
 	<link rel="stylesheet" href="SlideStyle.css">
+	<script src="slideBar.js"></script>
 	<title>Income Calculator</title>
 </head>
 
 <body>
 	<div id = "slideBar">
-		<button class = "closeButton" onclick="open()">close &times;<button>
+		<span class = "closeButton" onclick="close()">close &times;</span>
 		<a href="#" class="slide">Budget</a>
   		<a href="#" class="slide">Inc. Calc</a>
 	</div>
@@ -17,7 +18,7 @@
 
 	<div id = "area3">
 		<div id = "slideOpen">
-			<button class = "openButton" onclick="close()">&#9776;</button>
+			<span class = "openButton" onclick="open()">&#9776;Open</span>
 		</div>
 	</div>
 </body>

@@ -1,23 +1,31 @@
 /*
+Created By Chase Lose
+*/
+/*
 	Slide Bar Styling
 */
 #slideBar{
 	height: 100%;
 	position: fixed;
-	width: auto;
+	width: 0;
 	z-index: 1;
 	top: 0;
 	right: 0;
-	background-color: black;
 	overflow-x: hidden;
+	background-color: black;
 	padding-top: 20px;
+	transition: 0.5s;
+	padding-top: 60px;
 
 }
 
 #slideBar ul{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
 }
 
 #slideBar ul li{
@@ -27,4 +35,12 @@
 	padding: 14px 16px;
 	text-decoration: none;
 	color: white;
+}
+
+#slideBar #closeButton{
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+ 	margin-left: 50px;
 }
