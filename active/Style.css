@@ -4,3 +4,54 @@ Created By Chase Lose
 body{
 	background-color: white;
 }
+
+head{
+	background-color: lightblue;
+}
+
+.infoBar{
+	background-color: lightblue;
+	position: relative;
+}
+
+.dropbtn {
+  background-color: lightblue;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  color: black;
+  border-style: none;
+}
+
+.valueDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropContent a:hover{
+	background-color: #ddd;
+}
+
+.valueDropdown:hover .dropContent{
+	display: block;
+}
+
+.valueDropdown:hover .dropbtn{
+	background-color: blue;
+}

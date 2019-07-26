@@ -9,16 +9,29 @@
 </head>
 
 <body>
-	<div id = "slideBar">
-		<span class = "closeButton" onclick="close()">close &times;</span>
-		<a href="#" class="slide">Budget</a>
-  		<a href="#" class="slide">Inc. Calc</a>
+	<!-- 
+		Hovering the infoButton will reveal the amount you currently have
+		and how much youve made this week/ month
+	 -->
+<div id="infoBar" class="infoBar">
+	<div class="valueDropdown">
+	  <button class="dropbtn">$currentMoneyValue</button>
+		  <div class="dropContent">
+		    <a href="#">$moneyValue1</a>
+		    <a href="#">$moneyValue2</a>
+		    <a href="#">$moneyValue3</a>
+		  </div>
 	</div>
-	
+	<span class="openNav" onclick="openNav()">&#9776;</span>
+</div>
 
-	<div id = "area3">
-		<div id = "slideOpen">
-			<span class = "openButton" onclick="open()">&#9776;Open</span>
-		</div>
-	</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Filler1</a>
+  <a href="#">Filler2</a>
+  <a href="#">Filler3</a>
+  <a href="#">Filler4</a>
+</div>
+
 </body>
+</html>
