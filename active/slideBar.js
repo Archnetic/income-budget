@@ -1,6 +1,10 @@
-function open() {
-  document.getElementById("slideBar").style.display = "block";
+/*
+Created By Chase Lose
+*/
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
 }
-function close() {
-  document.getElementById("slideBar").style.display = "none";
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }
