@@ -35,17 +35,16 @@
 </div>
 
 <button class="addNewBill" onclick="addBill()">Add New Bill</button>
-<div id="budgetOrg" class="budgetOrg">
-	<div id="Bill">
-		<a href="#">PayMe</a>
+<button class="addNewBill" onclick="newCategory()">Add New Category</button>
+	<div class="billCategory">
+		<div id="budgetOrg" class="budgetOrg">
+				<div id="bill">
+					<input type="text" name="name" value="fillMe" class="billNameInput">
+					<input type="number" name="amount" value="0" class="billAmountInput">
+					<a href="javascript:void(0)" class="deleteBill" onclick="deleteBill()">&times;</a>
+				</div>
+		</div>
 	</div>
-	<div id="Bill2">
-		<a href="#">PayMe</a>
-	</div>
-	<div id="Bill3">
-		<a href="#">PayMe</a>
-	</div>
-</div>
 
 </body>
 </html>
