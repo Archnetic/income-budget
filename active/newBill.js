@@ -2,7 +2,7 @@
 Created by Chase Lose
  */
 var timesPressed = 0;
-function addBill(){
+function addBill(addBill){
     timesPressed++;
     var newBill = document.createElement("div");
     newBill.id = "bill" + timesPressed;
@@ -12,18 +12,18 @@ function addBill(){
         "\t\t\t<a href=\"javascript:void(0)\" class=\"deleteBill\" onclick=\"deleteBill(this)\">&times;</a>\n" +
         "\t\t</div>";
     newBill.innerHTML = bill;
-    document.getElementById("billCategory").parentNode.appendChild(newBill);
+    addBill.parentNode.appendChild(newBill);
 };
 
 function deleteBill(rem){
     rem.parentNode.remove();
 };
 
-function newCategory(){
+function newCategory(addCat){
     var newCat = document.createElement("div");
     newCat.id = "billCategory";
     var inject = "\t\t<input type=\"text\" name=\"name\" value=\"New Category\" class=\"categoryInput\">\n" +
-        "<button class=\"addNewBill\" onclick=\"addBill()\">Add New Bill</button>\n" +
+        "<button class=\"addNewBill\" onclick=\"addBill(this)\">Add New Bill</button>\n" +
         "<a href=\"javascript:void(0)\" class=\"deleteCat\" onclick=\"deleteCat(this)\">&times;</a>\n" +
         "\t</div>\n";
     newCat.innerHTML = inject;
