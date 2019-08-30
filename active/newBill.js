@@ -14,7 +14,7 @@ function addBill(){
 };
 
 function deleteBill(){
-    var rem = this.parentNode;
+    var rem = document.getElementById("bill");
     rem.parentNode.removeChild(rem);
 };
 
