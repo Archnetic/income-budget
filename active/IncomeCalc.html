@@ -10,10 +10,6 @@
 </head>
 
 <body>
-	<!-- 
-		Hovering the infoButton will reveal the amount you currently have
-		and how much youve made this week/ month
-	 -->
 <div id="infoBar" class="infoBar">
 	<div class="valueDropdown">
 	  <button class="dropbtn">$currentMoneyValue</button>
@@ -34,15 +30,20 @@
   <a href="#">Settings</a>
 </div>
 
-<button class="addNewBill" onclick="addBill()">Add New Bill</button>
-<button class="addNewBill" onclick="newCategory()">Add New Category</button>
-	<div class="billCategory">
-		<div id="budgetOrg" class="budgetOrg">
-				<div id="bill">
-					<input type="text" name="name" value="fillMe" class="billNameInput">
-					<input type="number" name="amount" value="0" class="billAmountInput">
-					<a href="javascript:void(0)" class="deleteBill" onclick="deleteBill()">&times;</a>
-				</div>
+
+<button class="addNewCategory" onclick="newCategory()">Add New Category</button>
+	<div id="budgetOrg" class="budgetOrg">
+		<div id="billCategory">
+			<input type="text" name="name" value="First Category" class="categoryInput">
+			<button class="addNewBill" onclick="addBill(this)">Add New Bill</button>
+			<a href="javascript:void(0)" class="deleteCat" onclick="deleteCat(this)">&times;</a>
+
+			<div id="bill">
+				<input type="text" name="name" value="First Bill" class="billInput">
+				<input type="number" name="amount" value="0.00" min="0" step=".01" class="billInput">
+				<input type="date" name="Due Date" class="billInput">
+				<a href="javascript:void(0)" class="deleteBill" onclick="deleteBill(this)">&times;</a>
+			</div>
 		</div>
 	</div>
 
