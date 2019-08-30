@@ -36,13 +36,13 @@
 		<div id="billCategory">
 			<input type="text" name="name" value="First Category" class="categoryInput">
 			<button class="addNewBill" onclick="addBill()">Add New Bill</button>
-			<a href="javascript:void(0)" class="deleteCat" onclick="deleteCat()">&times;</a>
+			<a href="javascript:void(0)" class="deleteCat" onclick="deleteCat(this)">&times;</a>
 
 			<div id="bill">
 				<input type="text" name="name" value="First Bill" class="billInput">
 				<input type="number" name="amount" value="0.00" min="0" step=".01" class="billInput">
 				<input type="date" name="Due Date" class="billInput">
-				<a href="javascript:void(0)" class="deleteBill" onclick="deleteBill()">&times;</a>
+				<a href="javascript:void(0)" class="deleteBill" onclick="deleteBill(this)">&times;</a>
 			</div>
 		</div>
 	</div>
