@@ -12,6 +12,7 @@ head{
 .infoBar{
 	background-color: lightblue;
 	position: relative;
+    margin-top: 0;
 }
 
 .dropbtn {
@@ -57,5 +58,27 @@ head{
 }
 
 .budgetOrg{
+    border: solid thin;
+    width: 60%;
+}
 
+#bill{
+    border: solid thin;
+    height:30px;
+}
+
+#catStyle{
+    border: solid thin;
+    background-color: lightgray;
+    height:30px;
+}
+
+.deleteCat{
+    float:right;
+    margin-right: 5px;
+}
+
+.deleteBill{
+    float:right;
+    margin-right: 5px;
 }
