@@ -5,14 +5,55 @@ body{
 	background-color: white;
 }
 
-head{
-	background-color: lightblue;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openNav{
+    font-size:30px;
+    cursor:pointer;
+    right: 30px;
+    position: fixed;
+
 }
 
 .infoBar{
-	background-color: lightblue;
+	background-color: #111;
 	position: relative;
-    margin-top: 0;
+    height: 55px;
+}
+
+.infoButton{
 }
 
 .dropbtn {
@@ -60,25 +101,35 @@ head{
 .budgetOrg{
     border: solid thin;
     width: 60%;
+    padding: 5px;
 }
 
 #bill{
     border: solid thin;
-    height:30px;
+    height:45px;
+    padding: 5px;
 }
 
 #catStyle{
     border: solid thin;
     background-color: lightgray;
-    height:30px;
+    height:45px;
+    padding: 5px;
 }
 
 .deleteCat{
     float:right;
     margin-right: 5px;
+    color: red;
 }
 
 .deleteBill{
     float:right;
     margin-right: 5px;
+    color: red;
+}
+
+.payBtn{
+    float: right;
+    margin-right: 10px;
 }

@@ -3,24 +3,24 @@
 <meta name="Calc" content="width=device-width, initial-scale=1">
 <head>
 	<link rel="stylesheet" href="BudgetStyle.css">
-	<link rel="stylesheet" href="SlideStyle.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="slideBar.js"></script>
 	<script src="budget.js"></script>
 	<title>Income Calculator</title>
 </head>
 
 <body>
-<div id="infoBar" class="infoBar">
-	<div class="valueDropdown">
+<div id="infoBar" class="infoBar thead-dark">
+	<!--<div class="valueDropdown">
 	  <button class="dropbtn">$currentMoneyValue</button>
 		  <div class="dropContent">
 		    <a href="#">$moneyValue1</a>
 		    <a href="#">$moneyValue2</a>
 		    <a href="#">$moneyValue3</a>
 		  </div>
-	</div>
-	<button class="addNewCategory" onclick="newCategory()">Add New Category</button>
-	<button class="payBill" onclick="payBill()">Pay Bill</button>
+	</div>-->
+	<button class="btn btn-primary btn-sm infoButton" onclick="newCategory()">Add Category</button>
+	<button class="btn btn-primary btn-sm infoButton" onclick="payBill()">Pay Bill</button>
 	<span class="openNav" onclick="openNav()">&#9776;</span>
 </div>
 
@@ -35,16 +35,17 @@
 	<div id="budgetOrg" class="budgetOrg">
 		<div id="billCategory">
 			<div id = "catStyle">
-				<input type="text" name="name" value="First Category" class="categoryInput">
-				<button class="addNewBill" onclick="addBill(this)">Add New Bill</button>
+				<input type="text" name="name" placeholder="First Category" class="categoryInput">
+				<button class="btn btn-primary btn-sm" onclick="addBill(this)">Add New Bill</button>
 				<a href="javascript:void(0)" class="deleteCat" onclick="deleteCat(this)">&times;</a>
 			</div>
 			<div id="bill">
-				<input type="text" name="name" value="First Bill" class="billInput">
+				<input type="text" name="name" placeholder="First Bill" class="billInput">
 				<input type="number" name="amount" value="0.00" min="0" step=".01" class="billInput">
 				<input type="date" name="Due Date" class="billInput">
-				<button class="payBill" onclick="payBill()">Pay Bill</button>
 				<a href="javascript:void(0)" class="deleteBill" onclick="deleteBill(this)">&times;</a>
+				<button onclick="payBill()" class="btn btn-primary btn-sm payBtn">Pay Bill</button>
+
 			</div>
 		</div>
 	</div>
