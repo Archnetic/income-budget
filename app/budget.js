@@ -1,12 +1,9 @@
 /*
 Created by Chase Lose
  */
-var timesPressed = 0;
 function addBill(addBill){
-    timesPressed++;
     var newBill = document.createElement("div");
     newBill.id = "bill";
-    newBill.draggable ="true";
     var inject = "\t\t\t<input type=\"text\" name=\"name\" placeholder=\"New Bill\" class=\"billClass\">\n" +
         "\t\t\t<input type=\"number\" name=\"amount\" value=\"0.00\" min=\"0\" step=\"any\" class=\"billAmountInput\">\n" +
         "\t\t\t<input type=\"date\" name=\"Due Date\" class=\"billDueInput\"> \n" +
@@ -48,5 +45,9 @@ function deleteCat(remCat){
 }
 
 function payBill(){
+
+}
+
+function payThisBill(){
 
 }
