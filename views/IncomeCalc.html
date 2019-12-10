@@ -2,10 +2,10 @@
 <html lang="en">
 <meta name="Calc" content="width=device-width, initial-scale=1">
 <head>
-	<link rel="stylesheet" href="BudgetStyle.css">
+	<link rel="stylesheet" href="../css/BudgetStyle.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="slideBar.js"></script>
-	<script src="budget.js"></script>
+	<script src="../app/slideBar.js"></script>
+	<script src="../app/budget.js"></script>
 	<title>Income Calculator</title>
 </head>
 
@@ -35,8 +35,8 @@
 				<input type="text" name="name" placeholder="First Bill" class="billInput">
 				<input type="number" name="amount" value="0.00" min="0" step=".01" class="billInput">
 				<input type="date" name="Due Date" class="billInput" id="dueDate">
-				<a href="javascript:void(0)" class="deleteBill" onclick="deleteBill(this)">&times;</a>
-				<button onclick="payThisBill()" class="btn btn-primary btn-sm payBtn">Pay Bill</button>
+				<a href="javascript:void(0)" class="deleteBill billInput" onclick="deleteBill(this)">&times;</a>
+				<button onclick="payThisBill()" class="btn btn-primary btn-sm payBtn billInput">Pay Bill</button>
 			</div>
 		</div>
 	</div>

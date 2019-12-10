@@ -55,10 +55,12 @@ body{
 }
 
 .budgetOrg{
+    display: inline-block;
     border: solid thin;
     width: 60%;
     padding: 5px;
     float: left;
+    height: inherit;
 }
 
 #infoOrg{
@@ -67,7 +69,8 @@ body{
     height: 100vh;
     padding: 5px;
     float: right;
-    position: static;
+    position: absolute;
+    display: inline-block;
 }
 
 #bill{
@@ -103,5 +106,18 @@ body{
 .infoButton{
     margin-top: 10px;
     margin-left: 10px;
+}
+
+.budgetOrg{
+    display: inline-block;
+    min-width: 700px;
+}
+
+.billInput{
+    min-width: auto;
+}
+
+#bill{
+    min-width: inherit;
 }
 
