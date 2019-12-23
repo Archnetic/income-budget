@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="Calc" content="width=device-width, initial-scale=1">
+<meta name="Calc" content="width=device-width, initial-scale=1" >
 <head>
 	<link rel="stylesheet" href="../css/BudgetStyle.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="../app/slideBar.js"></script>
-	<script src="../app/budget.js"></script>
-	<title>Income Calculator</title>
+	<script type="text/javascript" src="../app/slideBar.js"></script>
+	<script type="text/javascript" src="../app/budget.js"></script>
+	<script type="text/javascript" src="../server/bills.json"></script>
+	<title>Budget System</title>
 </head>
 
-<body>
+<body onload="populate()" onchange="stateChange()">
 	<div id="infoBar" class="infoBar thead-dark">
 		<button class="btn btn-primary btn-sm infoButton" onclick="newCategory()">Add Category</button>
 		<button class="btn btn-primary btn-sm infoButton" onclick="payBill()">Pay Bill</button>
@@ -24,6 +25,8 @@
 	  <a href="#">Settings</a>
 	</div>
 
+	<div id="payBillPrompt"></div>
+
 	<div id="budgetOrg" class="budgetOrg">
 		<div id="billCategory">
 			<div id = "catStyle">
@@ -32,9 +35,9 @@
 				<a href="javascript:void(0)" class="deleteCat" onclick="deleteCat(this)">&times;</a>
 			</div>
 			<div id="bill">
-				<input type="text" name="name" placeholder="First Bill" class="billInput">
-				<input type="number" name="amount" value="0.00" min="0" step=".01" class="billInput">
-				<input type="date" name="Due Date" class="billInput" id="dueDate">
+				<input type="text" name="name" placeholder="First Bill" class="billInput" id="name">
+				<input type="number" name="amount" value="0.00" min="0" step=".01" class="billInput" id="amount">
+				<input type="date" name="due_Date" class="billInput" id="dueDate">
 				<a href="javascript:void(0)" class="deleteBill billInput" onclick="deleteBill(this)">&times;</a>
 				<button onclick="payThisBill()" class="btn btn-primary btn-sm payBtn billInput">Pay Bill</button>
 			</div>
