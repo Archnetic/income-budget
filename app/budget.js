@@ -1,6 +1,8 @@
 /*
 Created by Chase Lose
  */
+
+
 function addBill(addBill){
     let newBill = document.createElement("div");
     newBill.id = "bill";
@@ -54,25 +56,31 @@ function populate(){
 }
 
 function stateChange(){
+    let jsonString = [];
     for(let i=0; i<document.getElementById("budgetOrg").childElementCount; i++){
         for(let j=0; j<document.getElementById("budgetOrg").children[i].children.length; j++){
-
-            //gets cat inputs
             if(document.getElementById("budgetOrg").children[i].children[j].id == "catStyle"){
-                let newHead = "catStyle";
-                let insert = document.getElementById("budgetOrg").children[i].children[j].children[0].value
+                let insert = document.getElementById("budgetOrg").children[i].children[j].children[0].value;
+                let newCat = {cat:{name: insert}};
+                jsonString += newCat;
+            }
+            else{
+                    let insertValue0 = document.getElementById("budgetOrg").children[i].children[j].children[0].value;
+                    let insertValue1 = document.getElementById("budgetOrg").children[i].children[j].children[1].value;
+                    let insertValue2 = document.getElementById("budgetOrg").children[i].children[j].children[2].value;
+                    let newBill = {bill:{name: insertValue0, amount: insertValue1, dueDate: insertValue2}};
+                    //alert(JSON.stringify(newBill));
+                    jsonString += newBill;
             }
 
-            //gets bills input
-            else{
-                let newHead = "bill"
-                for(k=0; k<3; k++) {
-                    let insertValue = document.getElementById("budgetOrg").children[i].children[j].children[k].value;
-                    let insertID = document.getElementById("budgetOrg").children[i].children[j].children[k].id;
-                    
-                    JSON.stringify({insert});
-                }
-            }
         }
     }
+    writeFile("server/bills.json", JSON.stringify(jsonString), 'utf8', function (err) {
+        if (err) {
+            console.log("An error occured while writing JSON Object to File.");
+            return console.log(err);
+        }
+        console.log("JSON file has been saved.");
+    });
+
 }
