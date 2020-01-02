@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="Calc" content="width=device-width, initial-scale=1" >
+<meta name="Calc" content="width=device-width, initial-scale=1" charset="UTF-8" >
 <head>
 	<link rel="stylesheet" href="../css/BudgetStyle.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script type="text/javascript" src="../app/slideBar.js"></script>
 	<script type="text/javascript" src="../app/budget.js"></script>
-	<script type="text/javascript" src="../server/bills.json"></script>
 	<title>Budget System</title>
 </head>
 
-<body onload="populate()" onchange="stateChange()">
+<body onload="populate()">
 	<div id="infoBar" class="infoBar thead-dark">
 		<button class="btn btn-primary btn-sm infoButton" onclick="newCategory()">Add Category</button>
 		<button class="btn btn-primary btn-sm infoButton" onclick="payBill()">Pay Bill</button>
+		<button class="btn btn-primary btn-sm infoButton" onclick="stateChange()">Save</button>
+
 		<span class="openNav" onclick="openNav()">&#9776;</span>
 	</div>
 
